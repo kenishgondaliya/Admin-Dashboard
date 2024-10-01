@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Montserrat-Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Montserrat-icon-->
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> -->
+
+
+    <!-- Montserrat-symbols-icon -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <section class="grid-container">
+        <div class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-symbols-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-symbols-outlined">notifications</span>
+                <span class="material-symbols-outlined">email</span>
+                <span class="material-symbols-outlined">account_circle</span>
+            </div>
+        </div>
+        <div id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-symbols-outlined">shopping_cart</span> STORE
+                </div>
+                <span class="material-symbols-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">dashboard</span>Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">inventory_2</span>Products
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">category</span>Categories
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">groups</span>Customers
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">fact_check</span>Inventory
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">insert_chart</span>Reports
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-symbols-outlined">settings</span>Setting
+                </li>
+            </ul>
+        </div>
+        <div class="main-container">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
+
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>PRODUCTS</h3>
+                        <span class="material-symbols-outlined">inventory_2</span>
+                    </div>
+                    <h1>249</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>CATEGORIES</h3>
+                        <span class="material-symbols-outlined">category</span>
+                    </div>
+                    <h1>25</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>CUSTOMERS</h3>
+                        <span class="material-symbols-outlined">groups</span>
+                    </div>
+                    <h1>1500</h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <h3>ALERTS</h3>
+                        <span class="material-symbols-outlined">notifications</span>
+                    </div>
+                    <h1>56</h1>
+                </div>
+            </div>
+
+
+            <div class="charts">
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Top 5 Products</h2>
+                    <div id="bar-chart"></div>
+                </div>
+
+                <div class="charts-card">
+                    <h2 class="chart-title">Purchase and Sales Orders</h2>
+                    <div id="area-chart"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apexcharts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.53.0/apexcharts.min.js"></script>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
